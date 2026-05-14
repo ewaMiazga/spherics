@@ -5,18 +5,45 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "spherics"
 version = "0.1.0"
-description = "Utilities for spherical distributions."
+description = "PyTorch implementations of spherical probability distributions."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
 authors = [
-  { name = "Ewa Miazga" }
+  { name = "Ewa Miazga, Nicolai Hermann, Jorge Condor" }
+]
+keywords = [
+  "spherical distributions",
+  "pytorch",
+  "probability",
+  "vMF",
+  "ASG",
+  "LTC",
+  "NASG",
+  "graphics",
+  "rendering",
 ]
 classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Mathematics",
 ]
+dependencies = [
+  "torch>=2.0",
+  "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+dev = ["build", "twine"]
+
+[project.urls]
+Homepage = "https://github.com/ewaMiazga/spherics"
+Source = "https://github.com/ewaMiazga/spherics"
+"Bug Tracker" = "https://github.com/ewaMiazga/spherics/issues"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
